@@ -1,0 +1,97 @@
+Pin
+=========================
+       jitbr: POSITIVE
+      jitlib: POSITIVE
+    pageperm: POSITIVE
+     vmleave: POSITIVE
+     mapname: POSITIVE
+         smc: POSITIVE
+   ripfxsave: POSITIVE
+  ripsiginfo: POSITIVE
+  ripsyscall: POSITIVE
+          nx: POSITIVE
+      envvar: POSITIVE
+      fsbase: POSITIVE
+       enter: NEGATIVE
+
+Valgrind
+=========================
+       jitbr: POSITIVE
+      jitlib: POSITIVE
+    pageperm: POSITIVE
+     vmleave: NEGATIVE
+     mapname: POSITIVE
+         smc: POSITIVE
+   ripfxsave: POSITIVE
+  ripsiginfo: POSITIVE
+  ripsyscall: NEGATIVE
+          nx: POSITIVE
+      envvar: POSITIVE
+      fsbase: UNKNOWN
+       enter: POSITIVE
+
+DynamoRIO
+=========================
+       jitbr: POSITIVE
+      jitlib: POSITIVE
+    pageperm: POSITIVE
+     vmleave: NEGATIVE
+     mapname: POSITIVE
+         smc: NEGATIVE
+   ripfxsave: NEGATIVE
+  ripsiginfo: POSITIVE
+  ripsyscall: POSITIVE
+          nx: POSITIVE
+      envvar: POSITIVE
+      fsbase: POSITIVE
+       enter: NEGATIVE
+
+QBDI
+=========================
+       jitbr: NEGATIVE
+      jitlib: NEGATIVE
+    pageperm: POSITIVE
+     vmleave: POSITIVE
+     mapname: NEGATIVE
+         smc: POSITIVE
+   ripfxsave: POSITIVE
+  ripsiginfo: POSITIVE
+  ripsyscall: POSITIVE
+          nx: POSITIVE
+      envvar: NEGATIVE
+      fsbase: NEGATIVE
+       enter: NEGATIVE
+
+============ EXTRA RESULTS ============
+
+Pin - Probe mode
+=========================
+       jitbr: NEGATIVE
+      jitlib: NEGATIVE
+    pageperm: POSITIVE
+     vmleave: POSITIVE
+     mapname: POSITIVE
+         smc: NEGATIVE
+   ripfxsave: NEGATIVE
+  ripsiginfo: NEGATIVE
+  ripsyscall: NEGATIVE
+          nx: NEGATIVE
+      envvar: POSITIVE
+      fsbase: NEGATIVE
+       enter: NEGATIVE
+
+Dyninst - Inlined / Probe mode
+=========================
+       jitbr: NEGATIVE
+      jitlib: NEGATIVE
+    pageperm: POSITIVE
+     vmleave: NEGATIVE
+     mapname: POSITIVE
+         smc: NEGATIVE
+   ripfxsave: NEGATIVE
+  ripsiginfo: NEGATIVE
+  ripsyscall: NEGATIVE
+          nx: NEGATIVE
+      envvar: POSITIVE
+      fsbase: NEGATIVE
+       enter: NEGATIVE
