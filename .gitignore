@@ -1,0 +1,20 @@
+# MacOS
+.DS_Store
+
+# PIN
+obj-intel64/
+pin.log
+
+# GDB
+.gdb_history
+peda-session*
+
+# Executables
+*.out
+build/
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf

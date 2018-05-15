@@ -1,5 +1,5 @@
 /*
-    A strightforward implementation of a Shadow Stack according to ROPdefender: A Detection
+    A straightforward implementation of a Shadow Stack according to ROPdefender: A Detection
     Tool to Defend Against Return-Oriented Programming Attacks by Lucas Davi, Ahmad-Reza
     Sadeghi, and Marcel Winandy.
 
