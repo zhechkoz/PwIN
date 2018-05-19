@@ -27,6 +27,7 @@ static int detect(void) {
 
     *mov_instr_address = 0x0;
 
+    // This will not work if Pin was executed with -smc_strict 1
     asm volatile(".global mov_label\n\t"
                  "mov_label: \n\t"
                  "mov $1, %%eax\n\t"

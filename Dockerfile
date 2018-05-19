@@ -7,10 +7,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     ca-certificates \
     curl \
+    cmake \
     gcc-7 g++-7 \
     gdb \
+    git \
     netcat \
-    python3 python3-pip python3-distutils \
+    python3 python3-pip python3-distutils python3-setuptools \
     vim && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -28,9 +30,10 @@ RUN PIN_URL=https://software.intel.com/sites/landingpage/pintool/downloads/pin-3
 ENV PIN_ROOT="/usr/local/pin"
 ENV PATH=$PIN_ROOT:$PATH
 
-# Install python3 ptrace
+# Install python3 ptrace and keystone
 RUN pip3 install --upgrade pip
-RUN pip3 install --upgrade python-ptrace
+RUN pip3 install --upgrade python-ptrace \
+                           keystone-engine
 
 # Copy files
 COPY jitmenot /root/jitmenot
@@ -38,7 +41,7 @@ COPY sandbox /root/sandbox
 COPY pwin /root/pwin
 COPY shadow /root/shadow
 
-# Example Pintool
+# Setup example Pintool
 RUN cp -R /usr/local/pin/source/tools/MyPinTool /root/inst-count && \
     mv /root/inst-count/MyPinTool.cpp /root/inst-count/InstCountPinTool.cpp && \
     chmod 644 /root/inst-count/InstCountPinTool.cpp && \
