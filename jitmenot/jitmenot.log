@@ -4,6 +4,7 @@ Pin
       jitlib: POSITIVE
     pageperm: POSITIVE
      vmleave: POSITIVE
+    constant: POSITIVE
      mapname: POSITIVE
          smc: POSITIVE
    ripfxsave: POSITIVE
@@ -20,6 +21,7 @@ Valgrind
       jitlib: POSITIVE
     pageperm: POSITIVE
      vmleave: NEGATIVE
+    constant: POSITIVE
      mapname: POSITIVE
          smc: POSITIVE
    ripfxsave: POSITIVE
@@ -36,6 +38,7 @@ DynamoRIO
       jitlib: POSITIVE
     pageperm: POSITIVE
      vmleave: NEGATIVE
+    constant: POSITIVE
      mapname: POSITIVE
          smc: NEGATIVE
    ripfxsave: NEGATIVE
@@ -52,6 +55,7 @@ QBDI
       jitlib: NEGATIVE
     pageperm: POSITIVE
      vmleave: POSITIVE
+    constant: POSITIVE
      mapname: NEGATIVE
          smc: POSITIVE
    ripfxsave: POSITIVE
@@ -70,6 +74,7 @@ Pin - Probe mode
       jitlib: NEGATIVE
     pageperm: POSITIVE
      vmleave: POSITIVE
+    constant: POSITIVE
      mapname: POSITIVE
          smc: NEGATIVE
    ripfxsave: NEGATIVE
@@ -86,6 +91,7 @@ Dyninst - Inlined / Probe mode
       jitlib: NEGATIVE
     pageperm: POSITIVE
      vmleave: NEGATIVE
+    constant: POSITIVE
      mapname: POSITIVE
          smc: NEGATIVE
    ripfxsave: NEGATIVE

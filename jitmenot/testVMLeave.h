@@ -5,7 +5,9 @@
 
 int register_test_vmleave(struct test_chain *);
 
-#define VMLEAVE_SIZE 60
+#define NUM_PATTERNS 2
+#define PIN_VMLEAVE_SIZE 60
+#define QBDI_VMLEAVE_SIZE 113
 
 #define TEST_ID_VMLEAVE 10
 #define TEST_NAME_VMLEAVE "vmleave"

@@ -10,6 +10,7 @@
 
 #include "testEnter.h"
 #include "testEnvVar.h"
+#include "testFindConstant.h"
 #include "testFsbase.h"
 #include "testJITBranchTime.h"
 #include "testJITLibTime.h"
@@ -113,6 +114,7 @@ int main(int argc, char **argv) {
     res |= register_test_jitlib(&head);
     res |= register_test_pageperm(&head);
     res |= register_test_vmleave(&head);
+    res |= register_test_find_constant(&head);
     res |= register_test_mapname(&head);
     res |= register_test_smc(&head);
     res |= register_test_ripfxsave(&head);

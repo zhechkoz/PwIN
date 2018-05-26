@@ -4,8 +4,8 @@ LDFLAGS = -Wl,-z,relro,-z,now -pie -lm -ldl
 
 BUILD = build
 
-HEADERS = jitmenot.h pmparser.h testEnvVar.h testJITBranchTime.h testJITLibTime.h testNX.h testPagePerm.h testMapname.h testRIPFXSAVE.h testRIPSIGINFO.h testRIPSYSCALL.h testSMC.h testVMLeave.h testFsbase.h testEnter.h Makefile
-OBJ = main.o pmparser.o testEnvVar.o testJITBranchTime.o testJITLibTime.o testNX.o testPagePerm.o testMapname.o testRIPFXSAVE.o testRIPSIGINFO.o testRIPSYSCALL.o testSMC.o testVMLeave.o testFsbase.o testEnter.o
+HEADERS = jitmenot.h pmparser.h testEnvVar.h testJITBranchTime.h testJITLibTime.h testNX.h testPagePerm.h testMapname.h testRIPFXSAVE.h testRIPSIGINFO.h testRIPSYSCALL.h testSMC.h testVMLeave.h testFsbase.h testEnter.h testFindConstant.h Makefile
+OBJ = main.o pmparser.o testEnvVar.o testJITBranchTime.o testJITLibTime.o testNX.o testPagePerm.o testMapname.o testRIPFXSAVE.o testRIPSIGINFO.o testRIPSYSCALL.o testSMC.o testVMLeave.o testFsbase.o testEnter.o testFindConstant.o
 TARGETS = $(patsubst %,$(BUILD)/%,$(OBJ))
 
 .PHONY: all
